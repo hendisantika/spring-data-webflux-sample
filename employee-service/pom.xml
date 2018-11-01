@@ -67,9 +67,19 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-maven-allopen</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-maven-noarg</artifactId>
+            <version>${kotlin.version}</version>
         </dependency>
     </dependencies>
 
@@ -107,12 +117,42 @@
                         <arg>-Xjsr305=strict</arg>
                     </args>
                     <compilerPlugins>
-                        <plugin>spring</plugin>
+                        <!--<plugin>spring</plugin>-->
+                        <!-- Or "jpa" for JPA support -->
+                        <plugin>no-arg</plugin>
+                        <plugin>all-open</plugin>
                     </compilerPlugins>
+
+                    <pluginOptions>
+                        <option>no-arg:annotation=com.hendisantika.webflux.employeeservice</option>
+                        <!-- Call instance initializers in the synthetic constructor -->
+                        <!-- <option>no-arg:invokeInitializers=true</option> -->
+                    </pluginOptions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 
     <dependencyManagement>
         <dependencies>
