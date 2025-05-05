@@ -48,7 +48,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jdbc</artifactId>
-            <version>4.0.0-SNAPSHOT</version>
+            <version>4.0.0-1737-nullable-embedded-with-collection-574-composite-id-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>io.r2dbc</groupId>
