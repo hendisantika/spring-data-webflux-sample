@@ -48,7 +48,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jdbc</artifactId>
-            <version>4.0.0-1828-aggregate-ref-with-convertable-SNAPSHOT</version>
+            <version>4.0.0-1993-force-quoting-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>io.r2dbc</groupId>
