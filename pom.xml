@@ -47,7 +47,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jdbc</artifactId>
-            <version>4.0.0-2078-custom-converter-in-collection-SNAPSHOT</version>
+            <version>5.0.0-GH-2165-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>io.r2dbc</groupId>
